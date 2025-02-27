@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0wur1uyk5ujh"]
+
+[ext_resource type="Script" path="res://Scenes/Growables/Carrot/carrot.gd" id="1_0xh1s"]
+[ext_resource type="PackedScene" uid="uid://bwvsm7i038kd2" path="res://assets/Growables/Carrots/carrot.blend" id="1_6b6kg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kdhy1"]
+radius = 0.20504
+height = 0.758191
+
+[node name="Carrot" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_0xh1s")
+prompt_message = null
+prompt_input = null
+
+[node name="CarrotCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.00294577, 0)
+shape = SubResource("CapsuleShape3D_kdhy1")
+
+[node name="CarrotModel" parent="." instance=ExtResource("1_6b6kg")]
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, 0, 0)
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]

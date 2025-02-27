@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://lrjlqngk68xu"]
+
+[ext_resource type="FontFile" uid="uid://deaxh1qvc7x2q" path="res://Scenes/MainMenu/SalmaproMedium-yw9ad.otf" id="1_u6ggd"]
+
+[resource]
+default_font = ExtResource("1_u6ggd")

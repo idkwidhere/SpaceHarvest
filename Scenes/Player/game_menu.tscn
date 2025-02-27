@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc3r6ihbfr6tj"]
+
+[ext_resource type="Script" path="res://Scenes/Player/game_menu.gd" id="1_xb02x"]
+[ext_resource type="Theme" uid="uid://lrjlqngk68xu" path="res://Scenes/MainMenu/GameTheme.tres" id="2_j4ixw"]
+
+[node name="GameMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xb02x")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -675.5
+offset_top = -362.0
+offset_right = 675.5
+offset_bottom = 362.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_j4ixw")

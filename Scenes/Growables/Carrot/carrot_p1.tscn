@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmb3vqtxai2fn"]
+
+[ext_resource type="PackedScene" uid="uid://x4k4wgcevc80" path="res://assets/Growables/Carrots/carrot_p1.blend" id="1_6jj7s"]
+[ext_resource type="Script" path="res://Scenes/Growables/Carrot/carrot_growth.gd" id="1_7db40"]
+
+[node name="Carrot_P1" type="MeshInstance3D"]
+script = ExtResource("1_7db40")
+
+[node name="Model" parent="." instance=ExtResource("1_6jj7s")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0, 0)
+
+[node name="GrowthTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="GrowthTimer" to="." method="_on_growth_timer_timeout"]
