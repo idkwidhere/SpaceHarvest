@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bkvox8llmxb5f"]
 
-[ext_resource type="Script" path="res://Scenes/Player/Interact/interact_ray.gd" id="1_6x0w8"]
+[ext_resource type="Script" uid="uid://brmjk6as3qn17" path="res://Scenes/Player/Interact/interact_ray.gd" id="1_6x0w8"]
 
 [node name="RayCast3D" type="RayCast3D"]
 target_position = Vector3(0, 0, -2)

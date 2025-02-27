@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bm4u7u4ik2qug"]
 
 [ext_resource type="PackedScene" uid="uid://ctp478rbfi662" path="res://assets/Growables/Onions/onion.blend" id="1_p5ob3"]
-[ext_resource type="Script" path="res://Scenes/Growables/Onion/onion.gd" id="1_vvi4x"]
+[ext_resource type="Script" uid="uid://ib75528eq7j" path="res://Scenes/Growables/Onion/onion.gd" id="1_vvi4x"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_byiit"]
 radius = 0.19578

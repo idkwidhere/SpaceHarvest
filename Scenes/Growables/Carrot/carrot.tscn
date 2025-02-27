@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0wur1uyk5ujh"]
 
-[ext_resource type="Script" path="res://Scenes/Growables/Carrot/carrot.gd" id="1_0xh1s"]
+[ext_resource type="Script" uid="uid://vvvh8m23qyck" path="res://Scenes/Growables/Carrot/carrot.gd" id="1_0xh1s"]
 [ext_resource type="PackedScene" uid="uid://bwvsm7i038kd2" path="res://assets/Growables/Carrots/carrot.blend" id="1_6b6kg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kdhy1"]

@@ -63,19 +63,19 @@ void fragment() {
 render_priority = 0
 shader = SubResource("Shader_nnek1")
 shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("1_2jxfp")
 shader_parameter/point_size = 1.0
 shader_parameter/roughness = 1.0
-shader_parameter/metallic_texture_channel = null
+shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
 shader_parameter/specular = 0.5
 shader_parameter/metallic = 0.0
+shader_parameter/texture_emission = ExtResource("1_2jxfp")
 shader_parameter/emission = Color(0, 0, 0, 1)
 shader_parameter/emission_energy = 1.0
 shader_parameter/uv1_scale = Vector3(1, 1, 1)
 shader_parameter/uv1_offset = Vector3(0, 0, 0)
 shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
-shader_parameter/texture_albedo = ExtResource("1_2jxfp")
-shader_parameter/texture_emission = ExtResource("1_2jxfp")
 
 [sub_resource type="SphereMesh" id="SphereMesh_55dji"]
 material = SubResource("ShaderMaterial_pjyxr")
@@ -115,8 +115,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_saec2"]
 _data = {
-"RESET": SubResource("Animation_vfxff"),
-"Rotate": SubResource("Animation_yq4k4")
+&"RESET": SubResource("Animation_vfxff"),
+&"Rotate": SubResource("Animation_yq4k4")
 }
 
 [node name="Sun" type="MeshInstance3D"]

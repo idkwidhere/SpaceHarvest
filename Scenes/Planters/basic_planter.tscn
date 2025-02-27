@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ca1w5vxemcd4b"]
 
 [ext_resource type="PackedScene" uid="uid://ut1escokt8fx" path="res://assets/Blender/basic_planter.blend" id="1_l6mem"]
-[ext_resource type="Script" path="res://Scenes/Planters/basic_planter.gd" id="1_rx6ei"]
+[ext_resource type="Script" uid="uid://dmjfhubn3do4y" path="res://Scenes/Planters/basic_planter.gd" id="1_rx6ei"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_t55g1"]
 height = 1.95205
