@@ -1,12 +1,71 @@
-[gd_scene load_steps=2 format=3 uid="uid://bba1bdxkpn6ea"]
+[gd_scene load_steps=4 format=3 uid="uid://bba1bdxkpn6ea"]
 
 [ext_resource type="Script" uid="uid://dxifbjaw40nu8" path="res://Scenes/Ship/ship.gd" id="1_qkeub"]
+[ext_resource type="Material" uid="uid://d0k8ix2tvj0ag" path="res://Scenes/Ship/GlassMaterial.tres" id="2_0beu4"]
 
-[node name="Ship" type="StaticBody3D"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_qkeub"]
+top_radius = 12.0
+bottom_radius = 12.0
+height = 10.0
+rings = 50
+
+[node name="Ship" type="Node3D"]
 script = ExtResource("1_qkeub")
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+[node name="Floor" type="CSGCylinder3D" parent="."]
 use_collision = true
 radius = 12.0
 height = 0.473473
 sides = 50
+
+[node name="Ceiling" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 4, 0)
+use_collision = true
+radius = 12.0
+height = 0.473473
+sides = 50
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.326709, 0)
+light_energy = 5.0
+light_indirect_energy = 2.0
+shadow_enabled = true
+omni_range = 10.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85618e-08, 0.326709, -7)
+light_energy = 5.0
+light_indirect_energy = 2.0
+shadow_enabled = true
+omni_range = 10.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85618e-08, 0.326709, 7)
+light_energy = 5.0
+light_indirect_energy = 2.0
+shadow_enabled = true
+omni_range = 10.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.32671, 0)
+light_energy = 5.0
+light_indirect_energy = 2.0
+shadow_enabled = true
+omni_range = 10.0
+
+[node name="Sides" type="CSGTorus3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.93803, 0)
+use_collision = true
+flip_faces = true
+inner_radius = 8.0
+outer_radius = 13.0
+sides = 50
+ring_sides = 50
+smooth_faces = false
+material = ExtResource("2_0beu4")
+
+[node name="Cut" type="CSGMesh3D" parent="Sides"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.216149, 0)
+operation = 2
+mesh = SubResource("CylinderMesh_qkeub")
+material = ExtResource("2_0beu4")

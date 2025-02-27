@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends Node3D
 
 # ship stuff
 var gravity = true
@@ -25,8 +25,6 @@ var seed_inventory: Dictionary = {
 		"crops": 0
 	},
 	
-	
-	
 }
 
 
@@ -36,6 +34,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-func _send_inventory() -> void:
-	print("fired")
-	print(seed_inventory)
+func _send_inventory() -> Dictionary:
+	print("_send_inventory fired")
+	return seed_inventory
