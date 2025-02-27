@@ -1,12 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bk1o0r4ka7bc7"]
+[gd_scene load_steps=9 format=3 uid="uid://bk1o0r4ka7bc7"]
 
 [ext_resource type="Texture2D" uid="uid://0vftebiyw4wc" path="res://assets/SpacePanoramas/panorama6.jpg" id="1_sjee8"]
 [ext_resource type="PackedScene" uid="uid://bba1bdxkpn6ea" path="res://Scenes/Ship/ship.tscn" id="2_ukymp"]
 [ext_resource type="PackedScene" uid="uid://dddvsyn8x3igc" path="res://Scenes/Space/sun.tscn" id="3_mrpej"]
 [ext_resource type="PackedScene" uid="uid://r3kox5yj2psf" path="res://Scenes/Player/player.tscn" id="4_iu7p5"]
 [ext_resource type="PackedScene" uid="uid://ca1w5vxemcd4b" path="res://Scenes/Planters/basic_planter.tscn" id="5_21c0y"]
-[ext_resource type="PackedScene" uid="uid://c0wur1uyk5ujh" path="res://Scenes/Growables/Carrot/carrot.tscn" id="6_gec13"]
-[ext_resource type="PackedScene" uid="uid://bm4u7u4ik2qug" path="res://Scenes/Growables/Onion/onion.tscn" id="7_byuwd"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cmm2c"]
 panorama = ExtResource("1_sjee8")
@@ -36,10 +34,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46277, 0.245668, -1.48927)
 [node name="Basic_Planter" parent="." instance=ExtResource("5_21c0y")]
 transform = Transform3D(0.4019, 0, -0.915684, 0, 1, 0, 0.915684, 0, 0.4019, -3.36838, 0.2611, -5.04813)
 
-[node name="Carrot" parent="." instance=ExtResource("6_gec13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.736918, 1.37027, -5.16738)
-
 [node name="Ship" parent="." instance=ExtResource("2_ukymp")]
-
-[node name="Onion" parent="." instance=ExtResource("7_byuwd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04178, 1.39279, -4.86489)

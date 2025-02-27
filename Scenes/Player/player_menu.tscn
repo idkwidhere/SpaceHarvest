@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://p2jlrc5p2daf"]
+[gd_scene load_steps=2 format=3 uid="uid://p2jlrc5p2daf"]
+
+[ext_resource type="Script" uid="uid://d1jskmbbpci1m" path="res://Scenes/Player/player_menu.gd" id="1_5c7ev"]
 
 [node name="PlayerMenu" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5c7ev")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
