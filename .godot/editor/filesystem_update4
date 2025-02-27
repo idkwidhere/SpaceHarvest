@@ -1,0 +1,8 @@
+res://Scenes/Ship/ship.tscn
+res://Scenes/Player/player.tscn
+res://Scenes/Planters/basic_planter.tscn
+res://Scenes/Space/space.tscn
+res://Scenes/Player/Interact/InteractRay.tscn
+res://Scenes/Player/game_menu.tscn
+res://Scenes/Player/ui.tscn
+res://Scenes/Player/player_menu.tscn
