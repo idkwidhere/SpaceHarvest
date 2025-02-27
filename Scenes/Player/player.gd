@@ -25,6 +25,7 @@ var player_menu_is_open = false
 var main_menu_is_open = false
 @onready var ui: Control = $Menus/UI
 @onready var game_menu: Control = $Menus/GameMenu
+@onready var player_menu: Control = $Menus/PlayerMenu
 
 
 
@@ -42,21 +43,22 @@ func _unhandled_input(event: InputEvent) -> void:
 		player_camera.rotation.x = clamp(player_camera.rotation.x, deg_to_rad(-90), deg_to_rad(80))
 
 func _input(event: InputEvent) -> void:
-	pass
+	if Input.is_action_just_pressed("menu") and !player_menu_is_open:
+		player_menu.show()
+		player_menu_is_open = true
+		print("shown")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		SignalBus.emit_signal("send_ship_inventory")
+	elif Input.is_action_just_pressed("menu") and player_menu_is_open:
+		player_menu.hide()
+		player_menu_is_open = false
+		print("hidden")
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
 		
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("menu") and !player_menu_is_open:
-		game_menu.show()
-		player_menu_is_open = true
-		print("shown")
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	elif Input.is_action_just_pressed("menu") and player_menu_is_open:
-		game_menu.hide()
-		player_menu_is_open = false
-		print("hidden")
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	pass
 
 
 func _physics_process(delta: float) -> void:

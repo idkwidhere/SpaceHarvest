@@ -1,5 +1,14 @@
 extends StaticBody3D
 
+# ship stuff
+var gravity = true
+var water = 100.0
+var oxygen = 100.0
+var credit = 500.0
+
+
+
+
 var seed_inventory: Dictionary = {
 	"carrot": {
 		"seeds": 5,
@@ -22,10 +31,11 @@ var seed_inventory: Dictionary = {
 
 
 func _ready() -> void:
-	SignalBus.connect("send_ship_inventory", send_inventory)
+	SignalBus.connect("send_ship_inventory", _send_inventory)
 	
 func _process(delta: float) -> void:
 	pass
 	
-func send_inventory() -> Dictionary :
-	return seed_inventory
+func _send_inventory() -> void:
+	print("fired")
+	print(seed_inventory)

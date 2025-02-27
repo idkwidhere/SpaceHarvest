@@ -11,16 +11,44 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5c7ev")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -257.5
-offset_top = -189.0
-offset_right = 257.5
-offset_bottom = 189.0
+offset_left = -397.5
+offset_top = -208.0
+offset_right = 397.5
+offset_bottom = 208.0
 grow_horizontal = 2
 grow_vertical = 2
+current_tab = 1
+
+[node name="Seeds" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+clip_tabs = false
+metadata/_tab_index = 0
+
+[node name="Seeds" type="Label" parent="TabContainer/Seeds"]
+layout_mode = 0
+offset_left = 41.5
+offset_top = 44.0
+offset_right = 81.5
+offset_bottom = 67.0
+text = "Seeds: "
+
+[node name="Crops" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+clip_tabs = false
+metadata/_tab_index = 1
+
+[node name="Crops" type="Label" parent="TabContainer/Crops"]
+layout_mode = 0
+offset_left = 74.5
+offset_top = 67.0
+offset_right = 119.5
+offset_bottom = 90.0
+text = "Crops"
