@@ -20,7 +20,11 @@ sky = SubResource("Sky_7g7bj")
 
 [node name="Space" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="SunLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.699357, -0.0034969, -0.714764, -0.198788, 0.961488, 0.189799, 0.686574, 0.274823, -0.673119, -152.102, 71.4207, 61.4034)
+shadow_enabled = true
+
+[node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_30drp")
 
 [node name="Sun" parent="." instance=ExtResource("3_mrpej")]

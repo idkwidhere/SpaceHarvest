@@ -1,12 +1,9 @@
-[gd_scene format=3 uid="uid://bba1bdxkpn6ea"]
+[gd_scene load_steps=2 format=3 uid="uid://bba1bdxkpn6ea"]
+
+[ext_resource type="Script" uid="uid://dxifbjaw40nu8" path="res://Scenes/Ship/ship.gd" id="1_qkeub"]
 
 [node name="Ship" type="StaticBody3D"]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.0306606, 0.99953, 0, -0.99953, -0.0306606, 8.21856, 21.6817, -17.1623)
-light_color = Color(0.891465, 0.635444, 0.526986, 1)
-directional_shadow_mode = 1
-sky_mode = 1
+script = ExtResource("1_qkeub")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
 use_collision = true
