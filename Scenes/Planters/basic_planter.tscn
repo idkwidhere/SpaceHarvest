@@ -28,6 +28,7 @@ shape = SubResource("CylinderShape3D_t55g1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.302964, 0)
 
 [node name="PlanterMenu" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -62,11 +63,6 @@ offset_right = 131.0
 offset_bottom = 126.5
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Button" type="Button" parent="PlanterMenu/Panel/PlantableSeeds"]
-layout_mode = 2
-keep_pressed_outside = true
-text = "Button Is Seed"
 
 [node name="Plant" type="Button" parent="PlanterMenu/Panel"]
 layout_mode = 0

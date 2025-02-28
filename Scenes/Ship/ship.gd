@@ -28,12 +28,20 @@ var seed_inventory: Dictionary = {
 }
 
 
+
+
+
+
 func _ready() -> void:
 	SignalBus.connect("send_ship_inventory", _send_inventory)
+	SignalBus.connect("subtract_seed", subtract_seed)
 	
 func _process(delta: float) -> void:
 	pass
 	
-func _send_inventory() -> Dictionary:
+func _send_inventory() -> void:
 	print("_send_inventory fired")
-	return seed_inventory
+	SignalBus.emit_signal("ship_inventory_dictionary", seed_inventory)
+
+func subtract_seed(seed_name) -> void:
+	print(seed_name)

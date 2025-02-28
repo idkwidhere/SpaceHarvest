@@ -5,6 +5,7 @@ var plant = preload("res://Scenes/Growables/Carrot/carrot_p1.tscn")
 @onready var plant_start: Marker3D = $PlantStart
 @onready var planter_light: OmniLight3D = $PlanterLight
 @onready var planter_menu: Control = $PlanterMenu
+@onready var plantable_seeds: VBoxContainer = $PlanterMenu/Panel/PlantableSeeds
 
 # growing stuff
 var is_full = false
@@ -15,8 +16,9 @@ var plantables: Dictionary = {}
 
 
 func _ready() -> void:
-	SignalBus.connect("send_ship_inventory", _load_inventory)
-	pass
+	SignalBus.growth_done.connect(plant_harvest)
+	SignalBus.ship_inventory_dictionary.connect(_load_inventory)
+	
 
 func _process(delta: float) -> void:
 	pass
@@ -46,7 +48,7 @@ func plant_seed():
 	instance.position = plant_start.position
 	plant_start.add_child(instance)
 
-	SignalBus.growth_done.connect(plant_harvest)
+	
 	
 
 func plant_harvest():
@@ -59,10 +61,12 @@ func plant_menu():
 	planter_menu.show()
 	
 	
-func _load_inventory():
-	
-	print("loaded inventory")
-	
+func _load_inventory(inventory):
+	for i in inventory:
+		var new_button = Button.new()
+		new_button.text = i
+		plantable_seeds.add_child(new_button)
+
 
 
 func _on_plant_pressed() -> void:
@@ -73,4 +77,8 @@ func _on_plant_pressed() -> void:
 
 
 func _on_destroy_pressed() -> void:
-	pass # Replace with function body.
+	if is_full and !is_harvestable:
+		for i in plant_start.get_children():
+				i.queue_free()
+				print(i)
+		is_full = false
