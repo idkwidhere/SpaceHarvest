@@ -9,23 +9,7 @@ var credit = 500.0
 
 
 
-var seed_inventory: Dictionary = {
-	"carrot": {
-		"seeds": 5,
-		"crops": 0
-	},
-	
-	"onion": {
-		"seeds": 5,
-		"cropts": 0
-	},
-	
-	"potatoes": {
-		"seeds": 5,
-		"crops": 0
-	},
-	
-}
+var seed_inventory: Array = []
 
 
 
