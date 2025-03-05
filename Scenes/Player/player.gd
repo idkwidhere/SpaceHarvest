@@ -10,6 +10,7 @@ const JUMP_VELOCITY = 4.5
 
 @onready var head: Node3D = $Head
 @onready var player_camera: Camera3D = $Head/PlayerCamera
+@onready var astronaut_model: Node3D = $PlayerCollider/AstronautModel
 
 # head bob shit
 @export var bob_freq = 2.0

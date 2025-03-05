@@ -17,7 +17,6 @@ var plantables: Dictionary = {}
 
 func _ready() -> void:
 	SignalBus.growth_done.connect(plant_harvest)
-	SignalBus.ship_inventory_dictionary.connect(_load_inventory)
 	
 
 func _process(delta: float) -> void:
@@ -57,7 +56,6 @@ func plant_harvest():
 	
 func plant_menu():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	SignalBus.emit_signal("send_ship_inventory")
 	planter_menu.show()
 	
 	

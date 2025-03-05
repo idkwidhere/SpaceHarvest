@@ -9,8 +9,3 @@ signal show_interact_prompt
 
 
 #inventory
-signal send_ship_inventory
-signal ship_inventory_dictionary(inventory)
-
-# inventory add/remove
-signal subtract_seed(seed_name)
